@@ -1,5 +1,5 @@
 import { useState } from 'react'  
-import { createBrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -17,7 +17,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <Router>
+    <BrowserRouter>
       <Route path="/" exact component={Home} />
       <Route path="/intro" component={Intro} />
       <Route path="/sign-up" component={SignUp} />
@@ -27,7 +27,7 @@ function App() {
       <Route path="/followers" component={Followers} />
       <Route path="/explore" component={Explore} />
       <Route path="/:username" component={Username} />
-    </Router>
+    </BrowserRouter>
   )
 }
 
