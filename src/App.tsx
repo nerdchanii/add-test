@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { useState } from 'react'  
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -18,17 +18,15 @@ function App() {
 
   return (
     <Router>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/intro" component={Intro} />
-        <Route path="/sign-up" component={SignUp} />
-        <Route path="/sign-in" component={SignIn} />
-        <Route path="/logout" component={Logout} />
-        <Route path="/news" component={News} />
-        <Route path="/followers" component={Followers} />
-        <Route path="/explore" component={Explore} />
-        <Route path="/:username" component={Username} />
-      </Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/intro" component={Intro} />
+      <Route path="/sign-up" component={SignUp} />
+      <Route path="/sign-in" component={SignIn} />
+      <Route path="/logout" component={Logout} />
+      <Route path="/news" component={News} />
+      <Route path="/followers" component={Followers} />
+      <Route path="/explore" component={Explore} />
+      <Route path="/:username" component={Username} />
     </Router>
   )
 }
