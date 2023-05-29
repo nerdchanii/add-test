@@ -3,7 +3,7 @@ import {
   createBrowserRouter,
   Route,
   createRoutesFromElements,
-  RouterProvider,
+  RouterProvider, 
 } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
@@ -15,6 +15,7 @@ import News from "./pages/News";
 import Followers from "./pages/Followers";
 import Explore from "./pages/Explore";
 import Username from "./pages/[username]";
+import Gnb from "./components/Gnb";
 
 const BrowserRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -33,7 +34,11 @@ const BrowserRouter = createBrowserRouter(
 
 function App() {
   const [count, setCount] = useState(0);
-  return <RouterProvider router={BrowserRouter} />;
+  return (
+    <RouterProvider router={BrowserRouter}>
+      <Gnb />
+    </RouterProvider> 
+  );
 }
 
 export default App;
